@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtering tabs</title>
+    <!-- CSS custom link -->
+     <link rel="stylesheet" href="css/style.css">
+     <!-- magnific pop up css -->
+      <link rel="stylesheet" href="css/magnific-popup.css">
+       <!-- jquery -->
+       <script src="js/jquery.min.js"></script>
+      <!-- magnific pop up js -->
+       <script src="js/magnific-popup.min.js"></script>
+      
+</head>
+<body>
+    <script>
+        jQuery(document).ready(function(){
+            // In the initial state all bikes shown
+            $('.item').addClass('show');
+            $(".filter-btn").click(function(){
+                let filterValue = $(this).attr("data-filter");
+            
+            $(".filter-btn").removeClass("active");
+            $(this).addClass("active");
+
+            if (filterValue === "whole"){
+                $(".item").fadeIn().addClass("show");
+            } else {
+            $(".item").fadeOut().removeClass("show");
+            $("." + filterValue).fadeIn().addClass("show") }
+
+            })
+
+            
+            $('.gallery').magnificPopup({
+            delegate: '.item',
+            type: 'image',
+            gallery:{
+                enabled: true
+            }
+        })
+
+        })
+
+        // magnific popup
+        
+    </script>
+    <div class="container">
+        <h1>Inexpensive bikes, purchase and have fun</h1>
+        <!-- Filter buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="whole">Whole</button>
+            <button class="filter-btn" data-filter="suzuki">Suzuki</button>
+            <button class="filter-btn" data-filter="pulsar">Pulsar</button>
+            <button class="filter-btn" data-filter="yamaha">Yamaha</button>
+            <button class="filter-btn" data-filter="scooter">Scooter</button>
+        </div>
+
+        <!-- Gallery -->
+        <div class="gallery">
+            <!-- Suzuki -->
+             <a href="/images/suzuki 1.webp" class="item suzuki" title="Suzuki">
+                <img src="/images/suzuki 2.webp" alt="Suzuki">
+             </a>
+             <a href="/images/suzuki 2.webp" class="item suzuki" title="Suzuki">
+                <img src="/images/suzuki 2.webp" alt="Suzuki">
+             </a>
+             <a href="/images/suzuki 3.webp" class="item suzuki" title="Suzuki">
+                <img src="/images/suzuki 3.webp" alt="Suzuki">
+             </a>
+             <a href="/images/suzuki 4.webp" class="item suzuki" title="Suzuki">
+                <img src="/images/suzuki 4.webp" alt="Suzuki">
+             </a>
+
+             <!-- Pulsar -->
+             <a href="/images/pulsar 1.webp" class="item pulsar" title="pulsar">
+                <img src="/images/pulsar 1.webp" alt="pulsar">
+             </a>
+             <a href="/images/pulsar 2.webp" class="item pulsar" title="pulsar">
+                <img src="/images/pulsar 3.webp" alt="pulsar">
+             </a>
+             <a href="/images/pulsar 3.webp" class="item pulsar" title="pulsar">
+                <img src="/images/pulsar 3.webp" alt="pulsar">
+             </a>
+             <!-- Yamaha     -->
+             <a href="/images/yamaha 1.webp" class="item yamaha" title="yamaha">
+                <img src="/images/yamaha 1.webp" alt="yamaha">
+             </a>
+             <a href="/images/yamaha 2.webp" class="item yamaha" title="yamaha">
+                <img src="/images/yamaha 3.webp" alt="yamaha">
+             </a>
+             <a href="/images/yamaha 3.webp" class="item yamaha" title="yamaha">
+                <img src="/images/yamaha 3.webp" alt="yamaha">
+             </a>
+             <!-- Scooter -->
+             <a href="/images/scooter 1.webp" class="item scooter" title="scooter">
+                <img src="/images/scooter 1.webp" alt="scooter">
+             </a>
+             <a href="/images/scooter 2.webp" class="item scooter" title="scooter">
+                <img src="/images/scooter 2.webp" alt="scooter">
+             </a>
+             <a href="/images/scooter 3.webp" class="item scooter" title="scooter">
+                <img src="/images/scooter 3.webp" alt="scooter">
+             </a>
+        </div>
+    </div>
+    <!-- custom js -->
+     <script src="js/script.js"></script>
+</body>
+</html>
