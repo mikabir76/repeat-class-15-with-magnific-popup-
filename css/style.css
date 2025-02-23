@@ -12,6 +12,11 @@ body{
     margin: auto;
     /* color: white; */
     box-shadow: 0 0 10px rgb(214, 213, 213);
+    margin-bottom: 25px;
+    /* padding: 10px; */
+}
+h1{
+    margin-top: 25px;
 }
 .filter-buttons{
     margin-top: 20px;
